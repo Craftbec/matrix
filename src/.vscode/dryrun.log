@@ -1,0 +1,19 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/craftbec/m2/src'
+gcc -Wall -Wextra -Werror -std=c11 -c s21_calc_complements.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_create_matrix.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_determinant.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_eq_matrix.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_inverse_matrix.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_mult_matrix.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_mult_number.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_remove_matrix.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_sub_matrix.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_sum_matrix.c
+gcc -Wall -Wextra -Werror -std=c11 -c s21_transpose.c
+gcc -Wall -Wextra -Werror -std=c11 -c help.c
+ar rc s21_matrix.a s21_calc_complements.o s21_create_matrix.o s21_determinant.o s21_eq_matrix.o s21_inverse_matrix.o s21_mult_matrix.o s21_mult_number.o s21_remove_matrix.o s21_sub_matrix.o s21_sum_matrix.o s21_transpose.o help.o
+gcc -Wall -Wextra -Werror -std=c11 -lgcov -coverage test.c s21_calc_complements.c s21_create_matrix.c s21_determinant.c s21_eq_matrix.c s21_inverse_matrix.c s21_mult_matrix.c s21_mult_number.c s21_remove_matrix.c s21_sub_matrix.c s21_sum_matrix.c s21_transpose.c help.c -lcheck -lm -lpthread -o test
+./test
+make: Leaving directory `/Users/craftbec/m2/src'
+ 
